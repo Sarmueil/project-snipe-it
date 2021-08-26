@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;1,200;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+  }
+  html{
+      height: 100%;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+a{
+    text-decoration: none;
+}
+.homepage{
+   background-size: cover;
+   background:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.6),rgba(0,0,0,0.3),rgba(0,0,0,0.4)), url('../Images/social_mainC.jpg');
+   background-position: center;
+   background-repeat: no-repeat;
+   height: auto;
+   width: 100%;
+   min-width:390px;
+}
+.homepage_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    position: sticky;
+    top: 0;
+    z-index:100;
+    padding: 15px;
+}
+.header_logo{
+  background: url('../images/snipe.svg'); 
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat; 
+  box-sizing: border-box;
+  width: 170px;
+  height:70px
+}
+.errorMessage{
+   font-family: "poppins" sans-serif;
+   letter-spacing: 1px;
+   margin-bottom: 5px;
+   font-size: 20px;
+   font-weight: 300;
+   color: red;
+}
+.homepage_main{
+    background:transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 7%;
+    text-align: center;
+    height: auto;
+}
+.main{
+    margin-bottom: 40px;
+    letter-spacing: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+    font-size: 50px;
+    animation-name: text-animation;
+    animation-duration: 3s;
+    color: white;
+}
+  @keyframes text-animation {
+       0%{
+           color: black;
+           margin-bottom: -10px;
+       }30%{
+          color: #BFD200;
+          letter-spacing: 7px;
+          margin-bottom: -10px;
+       }85%{
+           letter-spacing: 8px;
+           margin-bottom: -10px;
+       }
+  }
+.main_btn{
+    padding: 10px 25px;
+    font-size: 17px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    border-radius: 15px;
+    border:none;
+    color: #FFFFFF;
+    background: linear-gradient(150deg,#007F5F,#BFD200);
+}
+
+/*******MAIN SECTION*******/
+.homw_wrapper{
+    padding: 0 40px;
+    display: flex;
+    justify-content:center;
+    flex:1;
+    align-items: center;
+}
+.homepage_footer{
+    height: 13vh;
+    padding: 10px;
+    background: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer_logo{
+    background: url('../images/snipe_icon.svg'); 
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat; 
+    box-sizing: border-box;
+    width: 150px;
+    height:50px
+  }
+.footer_text{
+    color:white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+.footer_items{
+    display: flex;
+    align-items: center;
+}
+.footer_text{
+    margin: 10px;
+}
+.footer_copy{
+    margin-left: 20px;
+    font-size: 12px;
+}
+
+/*  FORM  */
+.close_btn{
+    font-size: 20px;
+    margin-bottom: 5px;
+    position: absolute;
+    right: 20px;
+    top:15px;
+    cursor: pointer;
+}
+.form_body{
+    background: white;
+    width: 290px;
+    margin-right: 40px;
+    margin-left: auto;
+    margin-bottom: 130px;
+    height: auto;
+    padding: 15px 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+.form_body2{
+    background: white;
+    width: 290px;
+    margin-right: 40px;
+    margin-left: auto;
+    height: auto;
+    padding: 15px 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+.form_header h2{
+    font-size: 35px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin-bottom: 30px;
+    
+}
+.form_group{
+    margin-bottom: 30px;
+}
+.form_group input{
+    height: 35px;
+    width: 100%;
+    padding-left: 10px;
+    font-size: 17px;
+    border: 1px solid lightgray;
+    border-radius: 15px;
+}
+.login_btn{
+    margin: 30px 0;
+    height: 35px;
+    width: 100%;
+    padding: 2px 0;
+    font-size: 18px;
+    cursor: pointer;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(130deg,#007F5F,#BFD200);
+       /* padding: 10px; */
+}
+.sign_up{
+   text-align: center;
+   margin-bottom: 40px;
+}
+.sign_up a{
+    text-decoration: none;
+    color: #007F5F;
+}
+.form_text{
+    font-size: 15px;
+}
+.form_text a {
+    text-decoration: none;
+    color: #007F5F;
+}
+
+@media screen and (max-width : 1300px) {
+    .main{
+        font-size: 40px;
+    }
+    .main_btn{
+        font-size: 15px;
+    }
+}
+@media  screen and (max-width:1199px) {
+    .main{
+        font-size: 40px;
+    }
+    .main_btn{
+        font-size: 15px;
+    }
+
+}
+@media screen and (max-width:1081px){
+    .homepage_main{
+        margin-left: 10px;
+    }
+    .main{
+        font-size: 40px;
+    }
+    .main_btn{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 990px){
+    .homepage_main{
+        display: none;
+        width: 0;
+    }
+    .form_body2{
+        width: 400px;
+    }
+    .form_body{
+        width: 400px;
+    }
+}
+@media screen and (max-width:530px){
+    .homepage{
+        width: 50vw;
+        background-size: cover;
+    }
+    .homw_wrapper{
+        padding: 0 10px;
+        margin-right: 50px;
+    }
+    .homepage_header{
+        padding: 5px;
+        position: relative;
+        bottom:50%;
+    }
+    .header_logo{ 
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat; 
+        box-sizing: border-box;
+        width: 100px;
+        height:70px
+      }
+      .footer_logo{ 
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat; 
+        box-sizing: border-box;
+        width: 70px;
+        height:40px
+      }
+    .homw_wrapper{
+        display: flex;
+        justify-self: flex-start;
+    }
+    .form_body2{
+        flex:1;
+        width: 100%;
+        margin-top: 20%;
+        margin: 7px;
+        padding: 15px 45px;
+    }
+    .form_header h2{
+        font-size: 25px;
+    }
+    .form_body{
+        width: 200px;
+    }
+    .footer_text{
+        margin: 5px;
+    }
+    .homepage_footer{
+        height: 4vh;
+        padding: 8px;
+    }
+    .login_btn{
+        height: 30px;
+        width: 100%;
+        padding: 2px 0;
+        font-size: 17px;
+    }
+    .form_text{
+        font-size: 9px;
+    }
+    .footer_logo{
+        width: 100px;
+        height:70px
+      }
+}
+@media screen and (max-width: 830px){
+    .homepage_footer{
+       height: 20vh;
+    }
+    .footer_items{
+        margin-right: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer_text{
+        color:white;
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+}

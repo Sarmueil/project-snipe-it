@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Login
+
+        //- link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css', integrity='sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh', crossorigin='anonymous')
+        link(rel="stylesheet", href="/css/login.css")
+    body
+        .homepage
+            .homepage_header
+                .header_logo
+            .homw_wrapper
+                .homepage_main
+                    .main Snipe It Love More!
+                .form_body2
+                    .form_header
+                        h2 Get started
+                        p.errorMessage #{errorMessage}
+                    form#registerForm(method='post', onsubmit="event.preventDefault(); validateForm();")
+                        .form_group
+                            input.form_control(type='text', name='firstName', placeholder='First Name', value=firstName, required='')
+                        .form_group
+                            input.form_control(type='text', name='lastName', placeholder='Last Name', value=lasttName, required='')
+                        .form_group
+                            input.form_control(type='text', name='username', placeholder='Username', value=username, required='')
+                        .form_group
+                            input.form_control(type='text', name='email', placeholder='Email', value=email, required='')
+                        .form_group
+                            input#password.form_control(type='password', name='password', placeholder='Password', required='')
+                        .form_group
+                            input#passwordConf.form_control(type='password', name='passwordConf', placeholder='Confirm password', required='')
+                        input.login_btn(type='submit', value='Sign up')
+                        .sign_up
+                            | Have an account? 
+                            a(href='/login') Log in
+                        .form_text
+                            | By signing up, you agree to our Terms 
+                            a(href='#') Data Policy
+                            |  and 
+                            a(href='#') Cookies Policy
+            .homepage_footer
+                .footer_desc
+                    .footer_img
+                        .footer_logo
+                    .footer_icons  
+                .footer_items
+                    .footer_text About us
+                    .footer_text Privacy
+                    .footer_text ENGLISH
+                    .footer_text Term of use
+                    .footer_text.footer_copy
+                        | &copy; 2021. All rights reserved.
+    
+    script.
+        var passwordField = document.getElementById("password")
+        var passwordConfirmField = document.getElementById("passwordConf")
+        var form = document.getElementById("registerForm")
+
+        function validateForm() {
+            if(passwordField.value != passwordConfirmField.value) {
+                alert("Passwords do not match. Please try again.")
+            }
+            else {
+                form.submit();
+            }
+        }
