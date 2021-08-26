@@ -1,0 +1,27 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+// const mongoose = require('mongoose');
+const mongoose_1 = __importDefault(require("mongoose"));
+const Schema = mongoose_1.default.Schema;
+const NotificationSchema = new Schema({
+    userTo: { type: Schema.Types.ObjectId, ref: 'User' },
+    userFrom: { type: Schema.Types.ObjectId, ref: 'User' },
+    notificationType: String,
+    opened: { type: Boolean, default: false },
+    entityId: Schema.Types.ObjectId
+}, { timestamps: true });
+NotificationSchema.statics.insertNotification = async (userTo, userFrom, notificationType, entityId) => {
+    var data = {
+        userTo: userTo,
+        userFrom: userFrom,
+        notificationType: notificationType,
+        entityId: entityId
+    };
+    await Notification.deleteOne(data).catch((error) => console.log(error));
+    return Notification.create(data).catch(error => console.log(error));
+};
+var Notification = mongoose_1.default.model('Notification', NotificationSchema);
+module.exports = Notification;
+//# sourceMappingURL=NotificationSchema.js.map
